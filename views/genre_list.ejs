@@ -1,0 +1,24 @@
+<html>
+  <%- include('header') %>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2"><%- include('navbar')%></div>
+        <div class="col-sm-10">
+          <h1><%=title%></h1>
+          <% if (genre_list.length) { %>
+          <ul>
+            <% genre_list.forEach(function(genre) { %>
+            <li>
+              <a href="<%= genre.url %>"><%= genre.name %></a>
+            </li>
+            <% }) %>
+          </ul>
+          <% } else { %>
+          <p>There are no Genres.</p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
